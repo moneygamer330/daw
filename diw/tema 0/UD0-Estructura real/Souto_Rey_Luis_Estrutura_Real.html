@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura real</title>
+    <style>
+        
+        .header{
+            display: flex;
+            margin: 5px;
+            background-color: rgb(236, 114, 114);
+            height: 50px;
+            width: 500px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .section{
+            background-color: rgb(236, 114, 114);
+            height: 500px;
+            margin: 5px auto;
+            width: 200px;
+            text-align: center;
+        }
+
+        .sectionHeader{
+            float: inline-start;
+            background-color: rgb(194, 194, 89);
+            height: 55px;
+            width: 100px;
+            margin: 5px;
+            text-align: center;
+            align-items: center;  
+        }
+
+        .articleHeader{
+            background-color: rgb(194, 194, 89);
+            height: 400px;
+            width: 100px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .sectionFooter{
+            background-color: rgb(194, 194, 89);
+            height: 50px;
+            width: 100px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .nav{
+            float: left;
+            display: flex;
+            background-color: rgb(236, 114, 114);
+            height: 500px;
+            margin: 5px;
+            width: 100px;
+            text-align: center;
+            position: absolute;
+            top: 60px;
+        }
+
+        .aside{
+            right: 0;
+            display: flex;
+            background-color: rgb(236, 114, 114);
+            height: 500px;
+            width: 100px;
+            margin: 5px;
+            text-align: center;
+            position: absolute;
+            top: 60px;
+        }
+
+        .footer{
+            display: flex;
+            background-color: rgb(236, 114, 114);
+            height: 50px;
+            width: 500px;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header"><pre>header </pre></header>
+
+    <section class="section">
+        <p>section</p>
+        <header class="sectionHeader">header</header>
+        <article class="articleHeader">article</article>
+        <footer class="sectionFooter">footer</footer>
+    </section>
+
+    <nav class="nav">nav</nav>
+
+    <aside class="aside">aside</aside>
+
+    <footer class="footer">footer</footer>
+
+</body>
+</html>
