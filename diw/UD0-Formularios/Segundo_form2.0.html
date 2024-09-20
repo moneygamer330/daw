@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Modificado</title>
+    <style>
+        form {
+            width: 450px;
+            margin: 20px auto;
+            border: 1px double #000;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px double #000;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 50px;
+        }
+
+        button {
+            width: 100%;
+            padding: 5px;
+            cursor: pointer;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="submit_form.php" method="post">
+    <table>
+        <tr>
+            <td>Nombre:</td>
+            <td><input type="text" id="name" name="name"></td>
+        </tr>
+        <tr>
+            <td>Correo electrónico:</td>
+            <td><input type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Mensaje:</td>
+            <td><textarea id="message" name="message"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit">Envía tu mensaje</button></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+
+
+        form {
+            width: 450px;
+            margin: 20px auto;
+            border: 1px solid #000;
+            padding: 2px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px double #000;
+        }
+
+        input[type="text"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        textarea {
+            width: 100%;
+            height: 50px;
+            border: none;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 5px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .double-column {
+            colspan: 2;
+        }
+
+        .triple-column {
+            colspan: 3;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#">
+    <table>
+        <tr>
+            <td>Nombre:</td>
+            <td colspan="3"><input type="text" name="nombre"></td>
+        </tr>
+        <tr>
+            <td>F. Nac.:</td>
+            <td><input type="date" name="fecha_nacimiento"></td>
+            <td>DNI:</td>
+            <td><input type="text" name="dni"></td>
+        </tr>
+        <tr>
+            <td>Apellidos:</td>
+            <td colspan="3"><input type="text" name="apellidos"></td>
+        </tr>
+        <tr>
+            <td>Calle y número:</td>
+            <td colspan="3"><input type="text" name="calle_numero"></td>
+        </tr>
+        <tr>
+            <td>Código Postal:</td>
+            <td><input type="text" name="codigo_postal"></td>
+            <td>Ciudad:</td>
+            <td><input type="text" name="ciudad"></td>
+        </tr>
+        <tr>
+            <td>Provincia:</td>
+            <td><input type="text" name="provincia"></td>
+            <td>Teléfono:</td>
+            <td><input type="text" name="telefono"></td>
+        </tr>
+        <tr>
+            <td>Opción:</td>
+            <td colspan="3">
+                <select name="opcion">
+                    <option value="opcion1">OPCION 1</option>
+                    <option value="opcion2">OPCION 2</option>
+                    <option value="opcion3">OPCION 3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Comentarios personales:</td>
+            <td colspan="3"><textarea name="comentarios"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Enviar datos"></td>
+            <td colspan="2"><input type="reset" value="Borrar los datos"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
