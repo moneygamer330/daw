@@ -8,7 +8,8 @@
 - DAW (*Desarrollo de Aplicaciones Web*)
 
 ## Contenido
-Aquí están todas las practicas realizadas durante este año de ```bash
+Aquí están todas las practicas realizadas durante este año de 
+```bash
 Desarrollo de aplicaciones web
 ```
 
