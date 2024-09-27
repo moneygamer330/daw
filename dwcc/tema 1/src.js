@@ -1,10 +1,2 @@
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
-console.log("Hola mundo");
+console.log(console);
+console.table = ["apples", "oranges", "bananas"];
