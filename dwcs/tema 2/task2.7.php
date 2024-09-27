@@ -26,6 +26,13 @@ function createSelect(array $productos): void{
         echo ('<option value=”'.$key.'”>'.$value['text'].' ('.$value['precio'].' €)</option>');
     }
 }
+
+function test_input($data) { //function to clean the data and do some basic validation
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>
 
 <!DOCTYPE html>
