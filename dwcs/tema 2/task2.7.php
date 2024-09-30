@@ -66,7 +66,7 @@ function test_input($data) { //function to clean the data and do some basic vali
 
     <p>You have asked for <?php echo $numProds?> bottles of <?php echo $option?>.</p>
     <br>
-    <p>Total price to pay: <?php echo $option * $numProds?> euros.</p>
+    <p>Total price to pay: <?php echo (int)$option * (int)$numProds?> euros.</p>
 
 
 
