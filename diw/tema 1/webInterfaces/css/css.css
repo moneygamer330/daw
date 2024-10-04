@@ -1,28 +1,32 @@
+/* Aplicamos Poppins a todo el sitio web por defecto */
 body {
-  font-family: "Poppins", sans-serif, Helvetica;
-  background-color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5;
   color: #012231;
   margin: 0;
   padding: 0;
 }
+
+/* Encabezado */
 header {
   background-color: #012231;
-  color: #ffffff;
+  color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
-header .site-title {
-  font-size: 1.8em;
-  text-align: left;
-  flex-grow: 1;
-  margin: 10px;
-}
 
 header .logo img {
   height: 50px;
 }
+
+header .site-title {
+  font-size: 1.8em;
+  text-align: center;
+  flex-grow: 1; 
+}
+
 nav ul {
   display: flex;
   gap: 15px;
@@ -30,73 +34,86 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-nav ul li {
-  list-style: none;
-}
+
 nav ul li img {
   height: 25px;
   cursor: pointer;
 }
+
 main {
   display: flex;
   margin: 20px;
 }
-aside.sidebar-left,
-aside.sidebar-right {
+
+aside.sidebar-left, aside.sidebar-right {
   width: 15%;
-  background-color: #cfd6da;
+  background-color: #CFD6DA;
   padding: 20px;
 }
+
 section.car-listing {
   width: 70%;
   padding: 0 20px;
 }
+
 .filters input {
-  width: 97%;
+  width: 98%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #b2bcc0;
+  border: 1px solid #B2BCC0;
   border-radius: 5px;
 }
+
 .car {
   display: flex;
-  border: 1px solid #b2bcc0;
+  border: 1px solid #B2BCC0;
   padding: 10px;
   margin-bottom: 15px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
+
 .car img {
   width: 150px;
   height: 100px;
   margin-right: 20px;
 }
+
 .car-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: 'Montserrat', sans-serif; 
 }
+
 .car-info h3 {
   margin: 0;
   font-size: 1.2em;
-  font-family: "Montserrat", sans-serif;
 }
+
 .btn-comprar {
-  background-color: #16384e;
-  color: #ffffff;
+  background-color: #16384E;
+  color: #FFFFFF;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
 }
 
-.btn-comprar:hover {
-  background-color: white;
-  color: #16384e;
-  border: 1px #16384e solid;
-}
 footer {
   background-color: #012231;
-  color: #ffffff;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+footer img {
+  width: 25px;
+  margin: 0 10px;
+}
+
+footer {
+  background-color: #012231;
+  color: #FFFFFF;
   padding: 40px 20px;
   text-align: left;
 }
@@ -110,17 +127,15 @@ footer {
   margin: 0 auto;
 }
 
-.footer-contact,
-.footer-social {
+.footer-contact, .footer-social {
   width: 45%;
 }
 
-.footer-contact h4,
-.footer-social h4 {
+.footer-contact h4, .footer-social h4 {
   font-size: 1.2em;
   margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
-  color: #d5d8d7;
+  font-family: 'Poppins', sans-serif;
+  color: #D5D8D7; 
 }
 
 .footer-contact p {
@@ -145,7 +160,7 @@ footer {
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #b2bcc0;
+  border-top: 1px solid #B2BCC0;
   margin-top: 30px;
   font-size: 0.9em;
 }

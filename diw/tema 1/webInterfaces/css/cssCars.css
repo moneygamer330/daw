@@ -1,0 +1,184 @@
+/* Estilos globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+    color: #012231;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #012231;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .site-title {
+    font-size: 1.8em;
+    text-align: center;
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li img {
+    height: 25px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+aside.sidebar-left, aside.sidebar-right {
+    width: 15%;
+    background-color: #CFD6DA;
+    padding: 20px;
+}
+
+/* Sección de detalles del coche */
+.car-detail {
+    width: 70%;
+    text-align: center;
+}
+
+.car-photo img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.car-info h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.car-price {
+    font-size: 1.8em;
+    color: #16384E;
+    margin: 15px 0;
+}
+
+.car-specs {
+    margin: 30px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.car-specs h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.car-specs ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.car-specs ul li {
+    margin-bottom: 10px;
+}
+
+.car-specs ul li strong {
+    font-weight: bold;
+}
+
+/* Estilos para los iconos */
+.icons {
+    margin-top: 20px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+footer {
+    background-color: #012231;
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.btn-comprar {
+    background-color: #16384E;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contact, .footer-social {
+    width: 45%;
+}
+
+.footer-contact h4, .footer-social h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social a {
+    margin-right: 15px;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #B2BCC0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
