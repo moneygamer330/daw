@@ -1,0 +1,18 @@
+services:
+  # web1:
+  #   image: httpd
+  #   ports:
+  #     - 8080:80
+  #     - 443:443
+  #   volumes:
+  #     - ./html:/usr/local/apache2/htdocs
+  bd:
+    image: mysql
+    hostname: mysql
+    ports:
+      - 3306:3306
+    env_file:
+      - .env
+    volumes:
+      # - ./data:/var/lib/mysql
+      - .:/proba

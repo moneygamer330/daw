@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura real</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 50%; 
+            margin: 0 auto; 
+            position: relative;
+        }
+
+        .header, .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(236, 114, 114);
+            height: 50px;
+            margin: 5px;
+            width: calc(100% - 10px); 
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(236, 114, 114);
+            height: 500px;
+            margin: 5px 105px; 
+            padding-top: 10px;
+        }
+
+        .sectionHeader, .articleHeader, .sectionFooter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(194, 194, 89);
+            margin: 5px 0;
+            width: 100px;
+        }
+
+        .sectionHeader {
+            height: 55px;
+        }
+
+        .articleHeader {
+            height: 400px;
+        }
+
+        .sectionFooter {
+            height: 50px;
+        }
+
+        .nav, .aside {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(236, 114, 114);
+            height: 500px;
+            width: 100px;
+            position: absolute;
+            top: 60px;
+        }
+
+        .nav {
+            left: 0; 
+        }
+
+        .aside {
+            right: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">header</header>
+
+        <section class="section">
+            <p>section</p>
+            <header class="sectionHeader">header</header>
+            <article class="articleHeader">article</article>
+            <footer class="sectionFooter">footer</footer>
+        </section>
+
+        <nav class="nav">nav</nav>
+
+        <aside class="aside">aside</aside>
+
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+</html>
