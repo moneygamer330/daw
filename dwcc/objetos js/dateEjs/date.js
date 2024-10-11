@@ -1,3 +1,5 @@
+console.log(" ");
+
 console.log("EJERCICIO 1 DATE");
 
 const date = new Date("2024-07-25");
@@ -21,7 +23,7 @@ function getDaysInMonth(month, year) {
 }
 
 console.log(
-  `O mes ${(month = 2)} do ano ${(year = 2023)} ten ${getDaysInMonth(
+  `O mes ${(month = 2)} do ano ${(year = 2024)} ten ${getDaysInMonth(
     month,
     year
   )} días.`
@@ -48,3 +50,5 @@ function pastDays(date) {
   return Math.floor((today - date) / 86400000);
 }
 console.log(`Days past in 2024 until today: ${pastDays()}`);
+
+console.log(" ");

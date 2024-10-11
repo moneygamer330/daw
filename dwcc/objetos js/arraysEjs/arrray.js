@@ -26,3 +26,41 @@ froitas.splice;
 console.log(" ");
 
 console.log("Ejercicio 3 arrays");
+
+console.log(" ");
+
+console.log("Ejercicio 1 desectructuracion de arrays");
+
+const gk = players[0][0];
+const fieldPlayers = [...players[1]];
+const allPlayers = [...players[0], ...players[1]];
+const players1 = [...players[0], "Thiago", "Coutinho", "Perisic"];
+
+const players = [
+  [
+    "Neuer",
+    "Pavard",
+    "Martinez",
+    "Alaba",
+    "Davies",
+    "Kimmich",
+    "Goretzka",
+    "Coman",
+    "Muller",
+    "Gnarby",
+    "Lewandowski",
+  ],
+  [
+    "Burki",
+    "Schulz",
+    "Hummels",
+    "Akanji",
+    "Hakimi",
+    "Weigl",
+    "Witsel",
+    "Hazard",
+    "Brandt",
+    "Sancho",
+    "Gotze",
+  ],
+];
