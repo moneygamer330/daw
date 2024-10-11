@@ -1,10 +1,10 @@
-function generarNumeroAleatorio() {
+function generarNumeroAleatorio04() {
   return Math.floor(Math.random() * 4);
 }
 
 console.log(generarNumeroAleatorio());
 
-function generarNumeroAleatorio() {
+function generarNumeroAleatorio13() {
   return Math.floor(Math.random() * 3) + 1;
 }
 
@@ -14,7 +14,7 @@ let x = 5;
 let y = 10;
 
 function numeroAleatorioEntre(x, y) {
-  return Math.floor(Math.random() * (x - y + 1)) + y;
+  return Math.ceil(Math.random() * (x - y)) + y;
 }
 
 console.log(numeroAleatorioEntre(x, y));
