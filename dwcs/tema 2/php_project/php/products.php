@@ -34,9 +34,29 @@
     </div>
 </div>   
 
+    <div class="products">
 
+        <div class="product1">
+            <img src="/img/product1.jpg" alt="High fluid air filter">
+            <p>High fluid air filter</p>
+            <p>100€ p.v.p</p>
+            <button>Add to cart</button>
+        </div>
 
+        <div class="product2">
+            <img src="/img/product2.jpg" alt="brakes discs">
+            <p>Brake discs</p>
+            <p>200€ p.v.p</p>
+            <button>Add to cart</button>
+        </div>
 
+        <div class="product3">
+            <img src="/img/product3.jpg" alt="Wheels">
+            <p>Wheels</p>
+            <p>300€ p.v.p</p>
+            <button>Add to cart</button>
+        </div>
+    </div>
 
 
 
