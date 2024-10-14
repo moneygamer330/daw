@@ -25,16 +25,7 @@ froitas.splice;
 
 console.log(" ");
 
-console.log("Ejercicio 3 arrays");
-
-console.log(" ");
-
 console.log("Ejercicio 1 desectructuracion de arrays");
-
-const gk = players[0][0];
-const fieldPlayers = [...players[1]];
-const allPlayers = [...players[0], ...players[1]];
-const players1 = [...players[0], "Thiago", "Coutinho", "Perisic"];
 
 const players = [
   [
@@ -64,3 +55,23 @@ const players = [
     "Gotze",
   ],
 ];
+
+const [players1, players2] = players;
+
+const [portero, ...fieldPlayers] = players1;
+
+console.log(portero);
+console.log(fieldPlayers);
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
+
+console.log(players1Final);
+
+console.log(" ");
+
+console.log("Ejercicio 2 desestructuracion de arrays");
+
+const [firstName, lastName] = str;
