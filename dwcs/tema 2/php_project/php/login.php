@@ -1,31 +1,30 @@
 <?php 
 
 session_start();
-if (isset($_SESSION[""]) === true) {
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: main.php");
     exit;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST["username"] == "admin" && $_POST["password"] == "admin") {
-        $_SESSION[""] = true;
+        $_SESSION["loggedin"] = true;
         header("location: main.php");
+        exit;
     } else {
         echo "Invalid username or password";
     }
-} else if ($_SERVER[""] == "") {
-    echo "Invalid request";
 }
-
 ?>
 
+<!--  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon"/>
 </head>
 <body>

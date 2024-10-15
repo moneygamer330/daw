@@ -1,0 +1,56 @@
+/* Archivo: style.css */
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar principal */
+.navbarPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.firstNavbar ul, .secondNavbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.firstNavbar ul li a, .secondNavbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.secondNavbar ul li img {
+    width: 24px;
+}
+
+.secondNavbar ul li a:hover, .firstNavbar ul li a:hover {
+    color: #f0c040;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
