@@ -133,6 +133,16 @@ body {
   font-size: 14px;
 }
 
+.confirmation {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .form {
     margin: 20px;

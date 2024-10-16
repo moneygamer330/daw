@@ -1,13 +1,10 @@
 <?php 
-
-function test_input($data) { 
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
 session_start();
+
+$default_username = "admin"; 
+$default_password = "admin"; 
+$error_message = "";
+
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: main.php");
     exit;
@@ -18,14 +15,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = test_input($_POST["password"]);
 
     if (empty($username) || empty($password)) {
-        echo "Username and password are required.";
-    } elseif ($username == "admin" && $password == "admin") {
+        $error_message = "Username and password are required.";
+    } elseif ($username == $default_username && $password == $default_password) {
         $_SESSION["loggedin"] = true;
+        $_SESSION["user_id"] = $username; // Guarda el nombre de usuario en la sesión
         header("location: main.php");
         exit;
     } else {
-        echo "Invalid username or password.";
+        $error_message = "Invalid username or password.";
     }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["logout"])) {
+    session_unset();
+    session_destroy();
+    header("location: login.php");
+    exit;
+}
+
+function test_input($data) { 
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 ?>
 
@@ -53,6 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br>
             <input type="submit" value="Login">
         </form>
-    <div>
+        <?php if ($error_message): ?>
+            <p class="error"><?= $error_message ?></p>
+        <?php endif; ?>
+    </div>
 </body>
 </html>
