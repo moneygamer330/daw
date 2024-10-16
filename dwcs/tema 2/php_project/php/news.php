@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/news.css">
     <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon"/>
     <title>News</title>
 </head>
 <body>
+
+//TODO do the css and revisar all
 <div class="navbarPrincipal">
     <div class="logo">
         <img src="/img/logo.png" alt="Cloud Motorsports">
@@ -28,19 +30,13 @@
         <nav>
             <ul>
                 <li><a href="login.php"><img src="/img/user.png" alt="logout"></a></li>
-                <li><a href=""></a><img src="/img/cart.png" alt="cart"></li>
+                <li><a href=""></a><img src="/img/carro-de-la-compra.png.png" alt="cart"></li>
             </ul>
         </nav>
     </div>
 </div>      
     
-
-
-
-
-
-
-
+//TODO do the news
 
 
 <div class="footer">

@@ -8,6 +8,8 @@
     <title>Main Page</title>
 </head>
 <body>
+
+//TODO revisar all
 <header>
 
     <div class="navbarPrincipal">
@@ -29,20 +31,19 @@
         <div class="secondNavbar">
             <nav>
                 <ul>
-                   <!-- Si el usuario está logueado, mostramos un mensaje -->
                    <?php if ($loggedIn): ?>
                         <li><a href="#"><img src="/img/user.png" alt="User">You are logged in</a></li>
                     <?php else: ?>
-                        <!-- Si no está logueado, mostramos el enlace al login -->
                         <li><a href="login.php"><img src="/img/user.png" alt="Login"></a></li>
                     <?php endif; ?>
-                    <li><a href="cart.php"><img src="/img/cart.png" alt="Cart"></a></li>
+                    <li><a href="cart.php"><img src="/img/carro-de-la-compra.png.png" alt="Cart"></a></li>
                 </ul>
             </nav>
         </div>
     </div>      
 </header>
     
+    //TODO meter contenido
     <div class="main">
         <p>Here you can find the best products for your car</p>
     </div>

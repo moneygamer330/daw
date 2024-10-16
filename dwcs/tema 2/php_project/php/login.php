@@ -1,5 +1,13 @@
 <?php 
 
+//TODO revisar all
+function test_input($data) { 
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 session_start();
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     header("location: main.php");
@@ -7,17 +15,21 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if ($_POST["username"] == "admin" && $_POST["password"] == "admin") {
+    $username = test_input($_POST["username"]);
+    $password = test_input($_POST["password"]);
+
+    if (empty($username) || empty($password)) {
+        echo "Username and password are required.";
+    } elseif ($username == "admin" && $password == "admin") {
         $_SESSION["loggedin"] = true;
         header("location: main.php");
         exit;
     } else {
-        echo "Invalid username or password";
+        echo "Invalid username or password.";
     }
 }
 ?>
 
-<!--  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="logo">
-        <img src="logo.png" alt="logo">
+        <img src="/img/logo.png" alt="logo">
     </div>
 
     <div class="login">

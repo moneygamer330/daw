@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticias Mundiales</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        color: #333;
+        margin: 20px 0;
+      }
+
+      .banner {
+        background-color: #007bff;
+        font-size: 24px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .column {
+        width: 30%;
+        padding: 20px;
+        margin: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .ads,
+      .social {
+        font-size: 16px;
+        color: #333;
+        background-color: #ffcc00;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .small-text {
+        font-size: 12px;
+        color: #bbb;
+      }
+
+      /* Estilos responsivos */
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column;
+        }
+
+        .column {
+          width: 100%;
+        }
+
+        nav ul li {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Noticias Mundiales y Actualidad</h1>
+
+    <div class="banner">¡Últimas noticias, tendencias y mucho más!</div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Últimas Noticias</a></li>
+        <li><a href="#">Tecnología</a></li>
+        <li><a href="#">Deportes</a></li>
+        <li><a href="#">Entretenimiento</a></li>
+        <li><a href="#">Política</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <div class="column">
+        <h2>Noticias Importantes</h2>
+        <p>
+          <strong>Última hora:</strong> Noticias relevantes con imágenes
+          optimizadas y contenido actualizado.
+        </p>
+        <p><a href="#">Leer más...</a></p>
+      </div>
+      <div class="column">
+        <div class="ads">¡Ofertas exclusivas en nuestros productos!</div>
+        <div class="ads">¡Descubre las promociones de esta semana!</div>
+      </div>
+      <div class="column">
+        <div class="social">¡Síguenos en nuestras redes sociales!</div>
+        <div class="social">Comparte nuestras noticias con tus amigos.</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Enlaces de interés</p>
+      <p class="small-text">
+        © 2024 Noticias Mundiales. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
