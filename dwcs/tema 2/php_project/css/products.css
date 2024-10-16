@@ -10,7 +10,6 @@ body {
   color: #333;
 }
 
-/* Cabecera (navbar) */
 .navbarPrincipal {
   display: flex;
   justify-content: space-between;
@@ -67,7 +66,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  width: calc(33% - 40px); /* Tres columnas */
+  width: calc(33% - 40px); 
   position: relative;
 }
 
@@ -109,7 +108,6 @@ body {
   background-color: #218838;
 }
 
-/* Footer */
 .footer {
   background-color: #333;
   color: white;

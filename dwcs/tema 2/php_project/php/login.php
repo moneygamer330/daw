@@ -1,6 +1,5 @@
 <?php 
 
-//TODO revisar all
 function test_input($data) { 
     $data = trim($data);
     $data = stripslashes($data);
@@ -36,12 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/docker-lamp/www/php_project/css/login.css">
+    <link rel="shortcut icon" href="/docker-lamp/www/php_project/img/icon.ico" type="image/x-icon"/>
 </head>
 <body>
     <div class="logo">
-        <img src="/img/logo.png" alt="logo">
+        <img src="/docker-lamp/www/php_project/img/logo.png" alt="logo">
     </div>
 
     <div class="login">

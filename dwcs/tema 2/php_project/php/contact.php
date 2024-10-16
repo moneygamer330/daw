@@ -2,9 +2,20 @@
 session_start(); 
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php"); 
+    header("Location: login.php");
     exit();
-} 
+}
+
+$logged_in = true; 
+$confirmation_message = ""; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $logged_in) {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+
+    $confirmation_message = "Thank you, " . $_SESSION['user_id'] . "! We have received your message and will reply shortly.";
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,16 +23,15 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/docker-lamp/www/php_project/css/style.css">
+    <link rel="shortcut icon" href="/docker-lamp/www/php_project/img/icon.ico" type="image/x-icon"/>
     <title>Contact</title>
 </head>
 <body>
 
-//TODO revisar all
 <div class="navbarPrincipal">
     <div class="logo">
-        <img src="/img/logo.png" alt="Cloud Motorsports">
+        <img src="/docker-lamp/www/php_project/img/logo.png" alt="Cloud Motorsports">
     </div>
 
     <div class="firstNavbar">
@@ -38,8 +48,14 @@ if (!isset($_SESSION['user_id'])) {
     <div class="secondNavbar">
         <nav>
             <ul>
-                <li><a href="login.php"><img src="/img/user.png" alt="login"></a></li>
-                <li><a href="cart.php"><img src="/img/carro-de-la-compra.png" alt="cart"></a></li>
+            <?php 
+                $loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
+                if ($loggedIn): ?>
+                        <li><a href="#"><img src="/docker-lamp/www/php_project/img/entrar.png" alt="User">You are logged in</a></li>
+                    <?php else: ?>
+                        <li><a href="login.php"><img src="/docker-lamp/www/php_project/img/salida.png" alt="Login"></a></li>
+                    <?php endif; ?>
+                <li><a href=""><img src="/docker-lamp/www/php_project/img/carro-de-la-compra.png" alt="cart"></a></li>
             </ul>
         </nav>
     </div>
@@ -49,10 +65,10 @@ if (!isset($_SESSION['user_id'])) {
     <h1>Contact with us</h1>
 </div>
 
-
-//TODO mostrar los datos por pantalla, "tratarlos"
 <div class="form">
-    <?php if ($logged_in): ?>
+    <?php if ($confirmation_message): ?>
+        <p class="confirmation"><?= $confirmation_message ?></p>
+    <?php else: ?>
         <form class="form_action" action="contact.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -65,16 +81,15 @@ if (!isset($_SESSION['user_id'])) {
 
             <input type="submit" value="Send">
         </form>
-    <?php else: ?>
-        <p class="login-reminder">You must be logged in to send a message. <a href="login.php">Login here</a>.</p>
     <?php endif; ?>
 </div>
 
-    <div class="footer">
-        <p>Cloud Motorsports</p>
-        <p>Email: cloudmotorsports@gmail.com</p>
-        <p>Address: Rua Carmiña dos Pazos, 25, Bajo</p>
-        <p>Phone: 981 234 234</p>
-    </div>
+<div class="footer">
+    <p>Cloud Motorsports</p>
+    <p>Email: cloudmotorsports@gmail.com</p>
+    <p>Address: Rua Carmiña dos Pazos, 25, Bajo</p>
+    <p>Phone: 981 234 234</p>
+</div>
+
 </body>
 </html>

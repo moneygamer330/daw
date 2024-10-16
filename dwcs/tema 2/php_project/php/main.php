@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/docker-lamp/www/php_project/css/main.css">
+    <link rel="shortcut icon" href="/docker-lamp/www/php_project/img/icon.ico" type="image/x-icon"/>
     <title>Main Page</title>
 </head>
 <body>
-
-//TODO revisar all
 <header>
 
     <div class="navbarPrincipal">
         <div class="logo">
-            <img src="/img/logo.png" alt="Cloud Motorsports">
+            <img src="/docker-lamp/www/php_project/img/logo.png" alt="Cloud Motorsports">
         </div>
         
         <div class="firstNavbar">
@@ -31,22 +29,26 @@
         <div class="secondNavbar">
             <nav>
                 <ul>
-                   <?php if ($loggedIn): ?>
-                        <li><a href="#"><img src="/img/user.png" alt="User">You are logged in</a></li>
+                <?php 
+                $loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
+                if ($loggedIn): ?>
+                        <li><a href="#"><img src="/docker-lamp/www/php_project/img/entrar.png" alt="User">You are logged in</a></li>
                     <?php else: ?>
-                        <li><a href="login.php"><img src="/img/user.png" alt="Login"></a></li>
+                        <li><a href="login.php"><img src="/docker-lamp/www/php_project/img/salida.png" alt="Login"></a></li>
                     <?php endif; ?>
-                    <li><a href="cart.php"><img src="/img/carro-de-la-compra.png.png" alt="Cart"></a></li>
+                    <li><a href=""><img src="/docker-lamp/www/php_project/img/carro-de-la-compra.png" alt="Cart"></a></li>
                 </ul>
             </nav>
         </div>
     </div>      
 </header>
     
-    //TODO meter contenido
-    <div class="main">
-        <p>Here you can find the best products for your car</p>
-    </div>
+    <section class="welcome-banner">
+        <h1>Welcome to Cloud Motorsports</h1>
+        <p>Find the best products for your car at unbeatable prices!</p>
+        <img src="/docker-lamp/www/php_project/img/banner.jpg" alt="High-Performance Car" class="banner-img">
+        <a href="products.php" class="cta-button">Shop Now</a>
+    </section>
     
     <div class="footer">
         <p>Cloud Motorsports</p>

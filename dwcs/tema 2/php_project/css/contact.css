@@ -1,4 +1,3 @@
-/* Reset de márgenes y padding */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,6 @@ body {
   color: #333;
 }
 
-/* Cabecera (navbar) */
 .navbarPrincipal {
   display: flex;
   justify-content: space-between;
@@ -53,7 +51,6 @@ body {
   height: 30px;
 }
 
-/* Texto principal */
 .text h1 {
   text-align: center;
   margin-top: 30px;
@@ -61,7 +58,6 @@ body {
   color: #007bff;
 }
 
-/* Formulario */
 .form {
   max-width: 600px;
   margin: 50px auto;
@@ -108,7 +104,6 @@ body {
   background-color: #0056b3;
 }
 
-/* Mensaje de recordatorio para login */
 .login-reminder {
   text-align: center;
   font-size: 18px;
@@ -125,7 +120,6 @@ body {
   text-decoration: underline;
 }
 
-/* Footer */
 .footer {
   background-color: #333;
   color: white;
@@ -139,7 +133,6 @@ body {
   font-size: 14px;
 }
 
-/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
   .form {
     margin: 20px;

@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/aboutUs.css">
-    <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/docker-lamp/www/php_project/css/aboutUs.css">
+    <link rel="shortcut icon" href="/docker-lamp/www/php_project/img/icon.ico" type="image/x-icon"/>
     <title>About us</title>
 </head>
 <body>
-
-//TODO do the css and revisar all
-
+    
 <div class="navbarPrincipal">
     <div class="logo">
-        <img src="/img/logo.png" alt="Cloud Motorsports">
+        <img src="/docker-lamp/www/php_project/img/logo.png" alt="Cloud Motorsports">
     </div>
     
     <div class="firstNavbar">
@@ -30,8 +28,14 @@
     <div class="secondNavbar">
         <nav>
             <ul>
-                <li><a href="login.php"><img src="/img/user.png" alt="logout"></a></li>
-                <li><a href=""></a><img src="/img/carro-de-la-compra.png.png" alt="cart"></li>
+            <?php 
+                $loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
+                if ($loggedIn): ?>
+                        <li><a href="#"><img src="/docker-lamp/www/php_project/img/entrar.png" alt="User">You are logged in</a></li>
+                    <?php else: ?>
+                        <li><a href="login.php"><img src="/docker-lamp/www/php_project/img/salida.png" alt="Login"></a></li>
+                    <?php endif; ?>
+                <li><a href=""></a><img src="/docker-lamp/www/php_project/img/carro-de-la-compra.png" alt="cart"></li>
             </ul>
         </nav>
     </div>
@@ -57,22 +61,7 @@
     </div>
 </div>      
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="footer">
+    <div class="footer">
         <p>Cloud Motorsports</p>
         <p>Email: cloudmotorspots@gmail.com</p>
         <p>Address: Rua Carmiña dos Pazos, 25, Bajo</p>
