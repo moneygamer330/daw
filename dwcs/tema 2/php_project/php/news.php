@@ -6,6 +6,103 @@
     <link rel="stylesheet" href="/docker-lamp/www/php_project/css/news.css">
     <link rel="shortcut icon" href="/docker-lamp/www/php_project/img/icon.ico" type="image/x-icon"/>
     <title>News</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .navbarPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px 30px;
+  }
+  
+  .logo img {
+    max-height: 60px;
+  }
+  
+  .firstNavbar nav ul,
+  .secondNavbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .firstNavbar nav ul li,
+  .secondNavbar nav ul li {
+    margin-left: 20px;
+  }
+  
+  .firstNavbar nav ul li a,
+  .secondNavbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .firstNavbar nav ul li a:hover,
+  .secondNavbar nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .secondNavbar img {
+    width: 30px;
+    height: 30px;
+  }
+
+.news-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news-item img {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.news-details h3 {
+    margin-bottom: 5px;
+}
+
+.news-details h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.news-details h3 a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+    </style>
 </head>
 <body>
 

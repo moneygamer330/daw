@@ -1,0 +1,7 @@
+services:
+  desktop:
+    image: kasmweb/doom:1.16.0
+    ports:
+      - 6901:6901
+    environment:
+      - VNC_PW=abc123.
