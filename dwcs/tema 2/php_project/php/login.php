@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 
 $default_username = "admin"; 
@@ -46,7 +47,7 @@ function test_input($data) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Cloud Motorsports</title>
     <link rel="stylesheet" href="/php_project/css/login.css">
     <link rel="shortcut icon" href="/php_project/img/icon.ico" type="image/x-icon"/>
     

@@ -1,11 +1,21 @@
 <?php
+
 session_start(); 
+
+$loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
 
 $error_message = $confirmation_message = $name = $email = $message = "";
 
   if (!isset($_SESSION['user_id'])) {
       header("Location: login.php");
       exit();
+  }
+
+  if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_unset(); 
+    session_destroy(); 
+    header("Location: main.php"); 
+    exit();
   }
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -38,7 +48,7 @@ $error_message = $confirmation_message = $name = $email = $message = "";
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
           $error_message = "Insert a valid email, please.";
       } else {
-          $confirmation_message = "Thank you, {$name} ! We have received your message and will reply shortly on {$email}";
+          $confirmation_message = "Thank you, {$name}! We have received your message and will reply shortly on {$email}";
       }
   }
 }
@@ -56,9 +66,9 @@ function test_input($data) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/php_project/css/style.css">
+    <link rel="stylesheet" href="/php_project/css/contact.css">
     <link rel="shortcut icon" href="/php_project/img/icon.ico" type="image/x-icon"/>
-    <title>Contact</title>
+    <title>Contact - Cloud Motorsports</title>
 </head>
 <body>
 
@@ -82,9 +92,8 @@ function test_input($data) {
           <nav>
             <ul>
             <?php 
-                $loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
                 if ($loggedIn): ?>
-                    <li><a href="#"><img src="/php_project/img/salida.png" alt="Logour">You are logged in</a></li>
+                    <li><a href="?logout=true"><img src="/php_project/img/salida.png" alt="Logout"></a></li>
                 <?php else: ?>
                     <li><a href="login.php"><img src="/php_project/img/entrar.png" alt="Login"></a></li>
                 <?php endif; ?>

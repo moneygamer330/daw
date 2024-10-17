@@ -1,3 +1,17 @@
+<?php 
+
+session_start();
+
+$loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
+
+if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_unset(); 
+    session_destroy(); 
+    header("Location: main.php"); 
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/php_project/css/main.css">
     <link rel="shortcut icon" href="/php_project/img/icon.ico" type="image/x-icon"/>
-    <title>Main Page</title>
+    <title>Main - Cloud Motorsports</title>
 
 </head>
 <body>
@@ -31,9 +45,8 @@
             <nav>
                 <ul>
                 <?php 
-                $loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
                 if ($loggedIn): ?>
-                        <li><a href="#"><img src="/php_project/img/salida.png" alt="Logout"></a></li>
+                        <li><a href="?logout=true"><img src="/php_project/img/salida.png" alt="Logout"></a></li>
                     <?php else: ?>
                         <li><a href="login.php"><img src="/php_project/img/entrar.png" alt="Login"></a></li>
                     <?php endif; ?>
