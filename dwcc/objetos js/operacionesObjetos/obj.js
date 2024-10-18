@@ -23,11 +23,11 @@ const gamee = {
   },
 };
 
-const [team1, draw, team2] = Object.values(gamee.odds);
+// const [team1, draw, team2] = Object.values(gamee.odds);
 
-console.log(team1);
-console.log(draw);
-console.log(team2);
+const { team1, x: draw, team2 } = gamee.odds;
+
+console.log(team1, draw, team2);
 
 console.log(" ");
 
@@ -37,7 +37,7 @@ const game = {
   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
 };
 
-for (const [key, value] of game.scored) {
+for (const [key, value] of game.scored.entries()) {
   console.log(`Goal ${key + 1}: ${value}`);
 }
 
@@ -67,7 +67,7 @@ const gameEvents = new Map([
   [92, "Yellow card"],
 ]);
 
-const eventos = new Map(gameEvents.values());
+const eventos = new Set(gameEvents.values());
 console.log(eventos);
 
 for (const [key, value] of gameEvents) {
