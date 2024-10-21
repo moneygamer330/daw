@@ -1,0 +1,1 @@
+For the proper functioning of the application (CSS and image display), you will need to open the project in the /php_project/ folder.
