@@ -26,7 +26,7 @@ console.log(
   "Ejercicio 3: Crea unha función frecha que sume todos os valores pasados como parámetros, sendo estes un número indeterminado."
 );
 
-const suma = (numeros) => {};
+const suma = (...numeros) => {};
 
 console.log(" ");
 
@@ -72,5 +72,55 @@ console.log(
 );
 
 const validarDni = function (dni) {
-  Dni = dni.toString().toUppercase();
+  const Dni = dni.toString().toUpperCase();
+
+  const letras = [
+    "T",
+    "R",
+    "W",
+    "A",
+    "G",
+    "M",
+    "Y",
+    "F",
+    "P",
+    "D",
+    "X",
+    "B",
+    "N",
+    "J",
+    "Z",
+    "S",
+    "Q",
+    "V",
+    "H",
+    "L",
+    "C",
+    "K",
+    "E",
+    "T",
+  ];
+
+  const letraCalculada = letras[Dni % 23];
 };
+
+console.log(validarDni("12345678w"));
+
+console, log(" ");
+
+console.log(
+  "Crea unha función que reciba como parámetro unha cantidade enteira e faga desglose do número de billetes e moedas necesarios para obtela. Debe usarse o número mínimo de billetes e moedas."
+);
+
+const desglose = function (cash) {
+
+  [500, 200, 100, 50, 20, 10, 5, 2, 1, 50] = billetesMondedas;
+
+  for (const desglosar  of billetesMondedas) {
+    if(cash / Math.max(...billetesMondedas) % 0){
+      
+    }
+  }
+
+};
+
