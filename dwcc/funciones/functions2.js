@@ -1,4 +1,4 @@
-//TODO repasar sintaxis js functions
+//TODO repasar sintaxis js functions, acabar ejs
 
 console.log(
   "Suma os valores da propiedade price do seguinte array de obxectos:"
