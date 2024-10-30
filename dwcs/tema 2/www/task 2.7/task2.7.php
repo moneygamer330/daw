@@ -49,7 +49,7 @@ function test_input($data) { //function to clean the data and do some basic vali
     <title>Task 2.7</title>
 </head>
 <body>
-    <h1>Task 2.7</h1>device-width
+    <h1>Task 2.7</h1>
     
     <br>
 

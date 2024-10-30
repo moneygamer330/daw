@@ -4,6 +4,14 @@ session_start();
 
 $loggedIn = isset($_SESSION['loggedIn']) ? $_SESSION['loggedIn'] : false;
 
+    
+if ($loggedIn){
+    header("Location: main.php");
+    exit();
+}
+
+
+
 if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     session_unset(); 
     session_destroy(); 
