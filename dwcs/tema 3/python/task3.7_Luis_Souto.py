@@ -1,5 +1,5 @@
 class Person:
-    def __init__(self, id, name, age):
+    def __init__(self, id:int, name:str, age:int):
         self.id = id
         self.name = name
         self.age = age
@@ -9,7 +9,7 @@ class Person:
 
 
 class Student:
-    def __init__(self, id, person, degree):
+    def __init__(self, id:int, person:Person, degree:str):
         self.id = id
         self.person = person
         self.degree = degree
@@ -19,9 +19,9 @@ class Student:
 
 
 class StudentGroup:
-    def __init__(self, id, group_name):
+    def __init__(self, id:int, groupName):
         self.id = id
-        self.group_name = group_name
+        self.groupName = groupName
         self.students = []
 
     def add_student(self, student):
@@ -32,7 +32,7 @@ class StudentGroup:
 
     def __str__(self):
         student_info = "\n  ".join(str(s) for s in self.students)
-        return f"StudentGroup[ID: {self.id}, Group Name: {self.group_name}]\n  Students:\n  {student_info}"
+        return f"StudentGroup[ID: {self.id}, Group Name: {self.groupName}]\n  Students:\n  {student_info}"
 
 
 # Creating three different students
