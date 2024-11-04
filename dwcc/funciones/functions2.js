@@ -68,3 +68,6 @@ console.log(" ");
 console.log(
   "d. Crea un novo array que conteña obxectos só co id e o nome das persoas."
 );
+
+//TODO REPASAR TODO JS,
+//TODO IMPORTANTE, IMPORTANTE, IMPORTANTE
