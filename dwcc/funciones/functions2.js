@@ -1,4 +1,4 @@
-//TODO repasar sintaxis js functions, acabar ejs
+//TODO acabar ejs
 
 // console.log(".reduce()");
 
@@ -45,9 +45,7 @@ console.log(
   "a. Crea un novo array que conteña só as persoas maiores de idade."
 );
 
-const maiorIdade = persoas.filter(function maiores() {
-  return persoas.idade >= 18;
-});
+const maiorIdade = persoas.filter((elemento) => elemento.idade >= 18);
 
 console.log(maiorIdade);
 
@@ -57,11 +55,17 @@ console.log(
   "b. Crea un novo array que conteña os nomes (só os nomes) de todas as persoas"
 );
 
+const nomePersoas = persoas.map((persoa) => persoas.nome);
+
 console.log(" ");
 
 console.log(
   "c. Crea un novo array que conteña, en maiúsculas, os nomes das persoas maioresº de idade."
 );
+
+const nomesMaius = persoas
+  .filter((elemento) => elemento.idade <= 18)
+  .map((person) => nome.toUpperCase);
 
 console.log(" ");
 
@@ -69,5 +73,18 @@ console.log(
   "d. Crea un novo array que conteña obxectos só co id e o nome das persoas."
 );
 
+console.log(" ");
+
+console.log("2.a ");
+
+const diasemanaM = diasemana.filter((dia) => dia.substirng(0, 1) === "m");
+console.log(diasemanaM);
+
+console.log(" ");
+
+console.log("2.b ");
+
+const comezaS = diasemana.some(dia);
+
 //TODO REPASAR TODO JS,
-//TODO IMPORTANTE, IMPORTANTE, IMPORTANTE
+//TODO IMPORTANTE, IMPORTANTE, IMPORTANTE, hacer apuntes a mano, etc
