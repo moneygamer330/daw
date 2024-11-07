@@ -20,4 +20,7 @@ from generator import views
 urlpatterns = [
     path('home/', views.home, name='home'),
     path('generatepassword/', views.password, name='password'),
+    path('about', views.about, name='about')
 ]
+
+#TODO mirar w3 django

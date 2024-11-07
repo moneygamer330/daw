@@ -14,11 +14,24 @@
         <option value="6">6</option>
         <option value="7">7</option>
         <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11" selected = 'selected'>11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <1></1>
       </select>
 
+      <br>  
+      <input type="checkbox" name="uppercase" /> Uppercase <br />
+      <input type="checkbox" name="numbers" /> Numbers <br />
+      <input type="checkbox" name="special" /> Special <br />
       <input type="submit" value="Generate Password" />
     </form>
 
-    <p>This is the password: {{ password }}</p>
+    <br>
+
+    <a href="{% url 'about' %}">About</a>
+
   </body>
 </html>
