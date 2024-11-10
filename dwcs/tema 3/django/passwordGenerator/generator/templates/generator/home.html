@@ -8,8 +8,7 @@
   <body>
     <h1>Password Generator</h1>
 
-    <form action="{% url 'password' %}" method="post">
-      {% csrf_token %}
+    <form action="{% url 'password' %}" >
       <select name="length">
         <option value="6">6</option>
         <option value="7">7</option>
@@ -19,12 +18,11 @@
         <option value="11" selected = 'selected'>11</option>
         <option value="12">12</option>
         <option value="13">13</option>
-        <1></1>
       </select>
 
       <br>  
       <input type="checkbox" name="uppercase" /> Uppercase <br />
-      <input type="checkbox" name="numbers" /> Numbers <br />
+      <input type="checkbox" name="number" /> Numbers <br />
       <input type="checkbox" name="special" /> Special <br />
       <input type="submit" value="Generate Password" />
     </form>
