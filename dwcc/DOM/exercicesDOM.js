@@ -6,9 +6,13 @@ console.log(" ");
 
 console.log("o nodo <div>");
 
+console.log(document.body.children[0]);
+
 console.log(" ");
 
 console.log("o nodo <ul>");
+
+console.log();
 
 console.log(" ");
 
