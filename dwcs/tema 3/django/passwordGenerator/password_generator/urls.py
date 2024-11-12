@@ -23,4 +23,4 @@ urlpatterns = [
     path('about', views.about, name='about')
 ]
 
-#TODO mirar w3 django
+#TODO mirar w3 django, y otros sites
