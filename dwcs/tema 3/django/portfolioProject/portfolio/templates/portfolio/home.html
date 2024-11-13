@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="shortcut icon"
+      href="media/portfolio/leonds1.ico"
+      type="image/x-icon"
+    />
+    <!--TODO search how to insert boostrap and css-->
+  </head>
+  <body>
+    <h1>Portfolio project</h1>
+
+    <p>Welocme to my portfolio</p>
+
+    {% for project in projects %}
+
+    <li class="list-group-item">
+      <img src="{{project.image.url}}" alt="winidepu" />
+    </li>
+    <li class="list-group-item">{{project.description}}</li>
+
+    {%if project.url %}
+    <li class="list-group-item"><a href="{{project.url}}"></a>Link</li>
+    {%endif%} {% endfor %}
+
+    <div class="mt"></div>
+  </body>
+</html>
