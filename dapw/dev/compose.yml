@@ -1,0 +1,6 @@
+#TODO HACER PRUEBAS APACHE, CEREAR IMAGEN PROPIA.
+services:
+  web:
+    build: ./apache
+    ports:
+      - 80:80
