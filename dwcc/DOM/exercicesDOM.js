@@ -12,13 +12,15 @@ console.log(" ");
 
 console.log("o nodo <ul>");
 
-console.log(document.body.childNodes[1]);
+console.log(document.body.firstElementChild.lastElementChild);
 
 console.log(" ");
 
 console.log("o segundo <li>");
 
-console.log(document.body.childNodes[1].childNodes[1]);
+console.log(
+  document.body.firstElementChild.nextElementSibling.lastElementChild
+);
 
 console.log(" ");
 
