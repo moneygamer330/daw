@@ -1,23 +1,4 @@
 console.log(
-  "1. Imaxinar que a variable elemento fai referencia a un elemento do DOM e text é unha variable con unha cadea de texto que inclúe etiquetas HTML. ¿Cales dos seguintes comandos farán exactamente o mesmo?:"
-);
-
-const elemento = document.body;
-
-const text = "<p> Hola mundo! </p>";
-
-console.log("a. elemento.append(document.createTextNode(text));");
-
-console.log(" ");
-console.log("b. elemento.innerHTML = text;");
-
-console.log(" ");
-
-console.log("c. elemento.textContent = text;");
-
-console.log(" ");
-
-console.log(
   "2. Dada unha lista <ol> con varios elementos <li>, crea o código necesario para eliminar todos os <li> da lista"
 );
 
@@ -84,7 +65,9 @@ liEx4_1.after(liEx4_2);
 
 console.log(" ");
 
-console.log("6. ");
+console.log(
+  "6. Crea unha función createTree(data) que devolva unha lista ul/li coma a da imaxe da dereita, para os datos proporcionados."
+);
 
 let arbore = {
   Fish: {
@@ -102,3 +85,36 @@ let arbore = {
     },
   },
 };
+
+function createTree(data) {
+  const ulex6 = document.createElement("ul");
+
+  for (const [key, value] of Object.entries(arbore)) {
+    const liex6 = document.createElement("li");
+
+    liex6.innerText = key;
+
+    if (Object.keys(value) > 0) {
+      const child = createTree(value);
+      liex6.append(child);
+    }
+    ulex6.append(liex6);
+  }
+  return ulex6;
+}
+
+console.log(createTree(arbore));
+
+console.log(" ");
+
+console.log(
+  "7. Escribe unha función crearCalendario(elemento, ano, mes) que engada ao elemento pasado como parámetro un calendario do ano e mes indicados. O calendario debe ser unha táboa, onde cada semana é un <tr> e cada día un <td>. A cabeceira da táboa está creada con <th>. Por exemplo, o calendario resultado de chamar á función cos seguintes parámetros vese na imaxe seguinte. Observar que se aplicaron estilos CSS para mellorar o aspecto. crearCalendario(calendario, 2022, 11); "
+);
+
+console.log(" ");
+
+console.log(
+  "8. Ordena a seguinte táboa pola columna “Nome”. Escribe un código que funcione independentemente do número de filas da táboa."
+);
+
+const orderByName = function (name) {};
