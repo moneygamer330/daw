@@ -1,12 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Blog
 
-# Create your views here.
-
 def all_blogs(request):
-    blogs = Blog.objects.order_by('date')#get all posts from the database
+    blogs = Blog.objects.order_by('-date')
     return render(request, 'blog/all_blogs.html', {'blogs':blogs})
 
-def details(request, blog_id):
+def detail(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-    return render(request, 'blog/details.html', {'blog':blog})
+    return render(request, 'blog/detail.html',{'blog':blog})
