@@ -111,6 +111,7 @@ console.log(
   "7. Escribe unha función crearCalendario(elemento, ano, mes) que engada ao elemento pasado como parámetro un calendario do ano e mes indicados. O calendario debe ser unha táboa, onde cada semana é un <tr> e cada día un <td>. A cabeceira da táboa está creada con <th>. Por exemplo, o calendario resultado de chamar á función cos seguintes parámetros vese na imaxe seguinte. Observar que se aplicaron estilos CSS para mellorar o aspecto. crearCalendario(calendario, 2022, 11); "
 );
 
+
 console.log(" ");
 
 console.log(
@@ -122,7 +123,23 @@ const orderByName = function (name) {
   const tbody = tableEx8.querySelector("tbody");
   const rows = Array.from(tbody.rows);
 
-  return rows.sort();
+  return rows.sort( 
+    (a, b) => a.cells[0].innerText.localeCompare(b.cells[0])
+  ).forEach((row) => tbody.append(row)  
+  );
 };
 
-console.log(orderByName());
+orderByName("Nome");
+
+
+console.log("9. Dada unha lista como a seguinte, escribe o código que engada o número de descendentes.");
+
+const ulEx9 = document.getElementById("ex9");
+const liEx9 = ulEx9.querySelectorAll("li");
+
+liEx9.forEach((li) => {
+  const ul = li.querySelector("ul"); 
+  const children = ul ? ul.children.length : 0; 
+
+  li.append(` [${children}]`); 
+});
