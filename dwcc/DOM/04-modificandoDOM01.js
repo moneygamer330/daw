@@ -117,4 +117,12 @@ console.log(
   "8. Ordena a seguinte táboa pola columna “Nome”. Escribe un código que funcione independentemente do número de filas da táboa."
 );
 
-const orderByName = function (name) {};
+const orderByName = function (name) {
+  const tableEx8 = document.getElementById("taboaOrdenar");
+  const tbody = tableEx8.querySelector("tbody");
+  const rows = Array.from(tbody.rows);
+
+  return rows.sort();
+};
+
+console.log(orderByName());
