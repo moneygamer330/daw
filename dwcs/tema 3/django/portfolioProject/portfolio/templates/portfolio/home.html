@@ -1,41 +1,32 @@
-{% extends "portfolio/base.html" %} {% block content %}
-
-<div class="container">
+{% extends "portfolio/base.html" %} {% block content %} {% load static %}
+<div class="container my-5">
   <!-- Header -->
-  <header class="portfolio-header">
-    <h1>Portfolio Project</h1>
-    <p>Welcome to my portfolio</p>
+  <header class="portfolio-header text-center mb-5">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+      Hi, I'm Luis Souto, a developer passionate about building robust and
+      scalable software solutions. Check out my latest projects below!
+    </p>
   </header>
 
-  {%load static%}
-  <!-- Static Image -->
-  <div class="text-center mb-4">
-    <img
-      src="{% static 'portfolio/git.png' %}"
-      alt="GitHub"
-      class="img-fluid"
-      style="max-height: 150px"
-    />
-    <a href="{% static 'portfolio/busca_ima_Luis_Souto.pdf' %}">Buscar img</a>
-    <a href="{% url 'blog:all_blogs' %}">Blog</a>
-  </div>
-
+  <!-- Project Cards -->
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     {% for project in projects %}
-    <div class="col">
+    <div class="col mb-4 d-flex justify-content-center">
       <div class="card h-100 shadow-sm">
         <img
-          src="{{project.image.url}}"
+          src="{{ project.image.url }}"
           class="card-img-top"
-          alt="Project Image"
+          alt="{{ project.title }}"
         />
         <div class="card-body">
-          <p class="card-text">{{project.description}}</p>
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
         </div>
         {% if project.url %}
         <div class="card-footer">
           <a
-            href="{{project.url}}"
+            href="{{ project.url }}"
             class="btn btn-primary w-100"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,5 +40,4 @@
     {% endfor %}
   </div>
 </div>
-
 {% endblock %}
