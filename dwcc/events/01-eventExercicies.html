@@ -26,12 +26,42 @@
     <a id="ligazon" href="#">Seguir lendo...</a>
 
     <br />
+    <hr />
 
     <!--Ex 2-->
-    <form id="form">
-      Texto: <input type="text" /><br />
+    <fieldset>
+      <legend>Engadir elementos a unha lista</legend>
+      <label for="texto">Texto:</label>
+      <input type="text" id="texto" />
+      <button onclick="engadirElemento()">Engadir elemento</button>
+      <ul id="lista">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+      </ul>
+    </fieldset>
 
-      <input type="submit" title="Engadir elemento" />
-    </form>
+    <br />
+    <hr />
+
+    <!--Ex 4-->
+
+    <div id="click">
+      <span>Sweeties (click me)!</span>
+    </div>
+
+    <ul id="list" class="oculto">
+      <li>Cake</li>
+      <li>Donut</li>
+      <li>Honey</li>
+    </ul>
   </body>
+
+  <br />
+  <hr />
+
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mo1-1RPPCSd54lH3fcOeOWM1wRHxEZ3C1A&s"
+    alt="img"
+    id="img"
+  />
 </html>
