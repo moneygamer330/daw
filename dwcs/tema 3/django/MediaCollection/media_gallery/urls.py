@@ -14,17 +14,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from django.conf.urls.static import static
-from django.conf import settings
-from video import views
-from images import views
-from home import views
+from django.contrib import admin # type: ignore
+from django.urls import path, include # type: ignore
+from django.conf.urls.static import static # type: ignore
+from django.conf import settings # type: ignore
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.home, name='home')
+    path('', include('home.urls')),
+    path('videos/', include('videos.urls')),
+    path('images/', include('images.urls')),
+    path('gallery/', include('gallery.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) #compose correctly images
