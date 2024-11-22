@@ -23,7 +23,7 @@ from django.conf import settings # type: ignore
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('videos/', include('videos.urls')),
+    path('videos/', include('video.urls')),
     path('images/', include('images.urls')),
     path('gallery/', include('gallery.urls')),
 ]

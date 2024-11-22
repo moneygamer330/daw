@@ -5,7 +5,7 @@ from django.db import models
 class Image(models.Model):
     title = models.CharField(max_length=200)  
     description = models.TextField(blank=True, null=True)
-    file = models.ImageField(upload_to='images/')  
+    file = models.ImageField(upload_to='media/images/')  
     upload_date = models.DateTimeField(auto_now_add=True)  
 
     def __str__(self):
