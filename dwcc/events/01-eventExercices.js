@@ -69,3 +69,80 @@ console.log(
 );
 
 const img = document.getElementById("img");
+
+img.addEventListener("click", () => {
+  console.log("Event: click");
+});
+
+img.addEventListener("dbclick", () => {
+  console.log("Event: dbclick");
+});
+
+img.addEventListener("contextmenu", () => {
+  console.log("Event: contextmenu");
+});
+
+img.addEventListener("mousedown", () => {
+  console.log("Event: mousedown");
+});
+
+img.addEventListener("mouseup", () => {
+  console.log("Event: mouseup");
+});
+
+img.addEventListener("wheel", () => {
+  console.log("Event: wheel");
+});
+
+img.addEventListener("mouseover", () => {
+  console.log("Event: mouseover");
+});
+
+img.addEventListener("mouseout", () => {
+  console.log("Event: mouseout");
+});
+
+img.addEventListener("dragstart", () => {
+  console.log("Event: dragstart");
+});
+
+img.addEventListener("drag", () => {
+  console.log("Event: drag");
+});
+
+img.addEventListener("dragend", () => {
+  console.log("Event: dragend");
+});
+
+console.log(" ");
+
+console.log("Pag 10 ej 1:");
+
+console.log(
+  "1a. Cando o cursor do rato entre e saia do botón, mostra unha mensaxe por consola indicándoo"
+);
+const button = document.getElementById("ocultar");
+
+button.addEventListener("mouseover", () => {
+  console.log("Rato dentro");
+});
+
+button.addEventListener("mouseout", () => {
+  console.log("Raton fora");
+});
+
+console.log(" ");
+
+console.log("1b. Ao pulsar o botón debe desaparecer o div con id=texto.");
+
+const div = document.getElementById("texto");
+
+button.addEventListener("click", () => {
+  div.classList.add(" ");
+});
+
+console.log(" ");
+
+console.log(
+  "1c. Cando se escriba algo na caixa de texto, debe mostrarse información da tecla pulsada no div e tamén o código da tecla pulsada. Ademais, se o div estaba oculto, debe mostrarse."
+);
