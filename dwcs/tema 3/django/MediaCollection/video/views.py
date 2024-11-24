@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import VideoForm
-from .models import Video
+from video.forms import VideoForm
 
 def upload_video(request):
     if request.method == 'POST':

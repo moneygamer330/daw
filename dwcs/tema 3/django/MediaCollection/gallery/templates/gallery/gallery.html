@@ -6,13 +6,13 @@ static %} {% block content %}
   <div class="col-md-4">
     <div class="card">
       <img
-        src="{{ images:image.image.url }}"
+        src="{{ image.image.url }}"
         class="card-img-top"
-        alt="{{ image.title }}"
+        alt="Imagen no disponible"
       />
       <div class="card-body">
-        <h5 class="card-title">{{ images:image.title }}</h5>
-        <p class="card-text">{{ images:image.description }}</p>
+        <h5 class="card-title">{{ image.title }}</h5>
+        <p class="card-text">{{ image.description }}</p>
       </div>
     </div>
   </div>
@@ -24,11 +24,11 @@ static %} {% block content %}
   <div class="col-md-4">
     <div class="card">
       <video controls class="card-img-top">
-        <source src="{{ video:video.video.url }}" type="video/mp4" />
+        <source src="{{ video.url }}" type="video/mp4" />
       </video>
       <div class="card-body">
-        <h5 class="card-title">{{ video:video.title }}</h5>
-        <p class="card-text">{{ video:video.description }}</p>
+        <h5 class="card-title">{{ video.title }}</h5>
+        <p class="card-text">{{ video.description }}</p>
       </div>
     </div>
   </div>

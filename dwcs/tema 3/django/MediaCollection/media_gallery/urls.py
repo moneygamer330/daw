@@ -28,4 +28,5 @@ urlpatterns = [
     path('gallery/', include('gallery.urls')),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) #compose correctly images
+if settings.DEBUG: #compose correctly images
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
