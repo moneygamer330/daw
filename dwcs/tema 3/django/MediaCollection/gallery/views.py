@@ -5,4 +5,5 @@ from video.models import Video
 def gallery(request):
     images = Image.objects.all()
     videos = Video.objects.all()
-    return render(request, 'gallery/gallery.html', {'images': images, 'videos': videos})
+    media_files = list(images) + list(videos)
+    return render(request, 'gallery/gallery.html', {'media_files': media_files})

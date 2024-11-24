@@ -1,0 +1,24 @@
+.card-fixed-height {
+    height: 100%;
+
+}
+
+.card-fixed-height img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-fixed-height video {
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}

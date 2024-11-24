@@ -10,3 +10,7 @@ class Image(models.Model):
 
     def __str__(self):
         return self.title
+    
+    @property
+    def is_image(self):
+        return self.file.name.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))

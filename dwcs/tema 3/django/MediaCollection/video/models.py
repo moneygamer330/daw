@@ -10,3 +10,7 @@ class Video(models.Model):
 
     def __str__(self):
         return self.title
+    
+    @property
+    def is_video(self):
+        return self.file.name.lower().endswith(('.mp4', '.mov', '.avi'))
