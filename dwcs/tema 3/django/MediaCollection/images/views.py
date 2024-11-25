@@ -6,7 +6,7 @@ def upload_image(request):
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('home:home')
     else:
         form = ImageForm()
     return render(request, 'images/upload_image.html', {'form': form})

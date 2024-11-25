@@ -6,7 +6,7 @@ def upload_video(request):
         form = VideoForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('home:home')
     else:
         form = VideoForm()
-    return render(request, 'videos/upload_video.html', {'form': form})
+    return render(request, 'videos/upload_videos.html', {'form': form})

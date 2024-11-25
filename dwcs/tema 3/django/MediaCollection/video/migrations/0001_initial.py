@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200)),
                 ('description', models.TextField(blank=True, null=True)),
-                ('file', models.FileField(upload_to='videos/')),
+                ('file', models.FileField(upload_to='video/')),
                 ('upload_date', models.DateTimeField(auto_now_add=True)),
             ],
         ),

@@ -1,24 +1,28 @@
-.card-fixed-height {
-    height: 100%;
-
+.gallery-container {
+  margin-bottom: 2rem;
 }
 
-.card-fixed-height img {
-    height: 200px;
-    object-fit: cover;
+.card {
+  height: 100%;
+  margin-bottom: 1rem;
 }
 
-.card-fixed-height video {
-    height: 200px;
-    object-fit: cover;
+.media-content {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.row {
+  gap: 1.5rem;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
