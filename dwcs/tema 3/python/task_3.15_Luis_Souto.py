@@ -8,3 +8,4 @@ with open('catalog(1).json', 'r') as json_file:
     print("\nPrinting the title of the books\n")
     for x in data['catalog']:
         print("Title: {x['title']}")
+        
