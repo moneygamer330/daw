@@ -1,0 +1,1 @@
+console.log("Crea unha páxina que teña un formulario con unha caixa de texto. Utilizando JavaScript, fai que cando a caixa de texto teña o foco, o borde da mesma sexa verde e cando perda o foco volva ao estilo por defecto. NOTA: non usar CSS border.")
