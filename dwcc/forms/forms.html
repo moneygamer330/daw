@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
     <script src="forms.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form>
+      <label for="texto">Introduce texto:</label>
+      <input type="text" id="texto" name="texto" />
+    </form>
+    <br />
+    <hr />
+
+    <form id="form2">
+      <label for="texto">Texto:</label>
+      <input type="text" id="texto" name="texto" />
+
+      <br />
+      <br />
+
+      <select name="select" id="select" name>
+        Select:
+        <option value="select1">select1</option>
+        <option></option>
+        <option value="select2">select2</option>
+        <option value="select">select3</option>
+      </select>
+
+      <br />
+      <br />
+
+      <div class="checkbox">
+        <label>1<input type="checkbox" name="1" id="1" /></label>
+        <label>2<input type="checkbox" name="2" id="2" /></label>
+        <label>3<input type="checkbox" name="3" id="3" /></label>
+      </div>
+
+      <br />
+      <br />
+
+      <label for="textarea">Texarea</label>
+      <textarea name="textarea" id="textarea" placeholder="textarea">
+      </textarea>
+
+      <br />
+      <br />
+      <input type="submit" value="send" id="sendº" />
+    </form>
+  </body>
 </html>
