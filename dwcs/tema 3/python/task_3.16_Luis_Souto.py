@@ -1,7 +1,6 @@
 from datetime import date
 
-
-class person:
+class Person:
     def __init__(self, name, email, telephone):
         self.name = name
         self.email = email
@@ -9,7 +8,7 @@ class person:
     def __str__(self):
         return self.name + " " + self.email + " " + self.telephone
     
-class product:
+class Product:
     def __init__(self, name, description, price, image):
         self.name = name
         self.description = description
@@ -19,29 +18,28 @@ class product:
     def __str__(self):
         return self.name + " " + self.description + " " + self.price + " " + self.image
     
-class order:
-    def __init__(self, date:date, product:product, client:person):
+class Order:
+    def __init__(self, date:date, product:Product, client:Person):
         self.date = date
         self.product = product
         self.person = client
         
     def __str__(self): 
-        return self.date + " " + self.product + " " + self.person
-    
+        product_details = "\n".join(f" - {Product} for product in self.products")
     
     def main():
         # Create some products
-        product1 = product("Laptop", "A high-end gaming laptop", "1500", "laptop.jpg")
-        product2 = product("Smartphone", "Latest model smartphone", "800", "smartphone.jpg")
-        product3 = product("Headphones", "Noise-cancelling headphones", "200", "headphones.jpg")
+        product1 = Product("Laptop", "A high-end gaming laptop", "1500", "laptop.jpg")
+        product2 = Product("Smartphone", "Latest model smartphone", "800", "smartphone.jpg")
+        product3 = Product("Headphones", "Noise-cancelling headphones", "200", "headphones.jpg")
 
         # Create a client
-        client = person("John Doe", "john.doe@example.com", "123-456-7890")
+        client = Person("John Doe", "john.doe@example.com", "123-456-7890")
 
         # Create orders
-        order1 = order(date.today(), product1, client)
-        order2 = order(date.today(), product2, client)
-        order3 = order(date.today(), product3, client)
+        order1 = Order(date.today(), product1, client)
+        order2 = Order(date.today(), product2, client)
+        order3 = Order(date.today(), product3, client)
 
         # Print orders
         print("Order 1:")
