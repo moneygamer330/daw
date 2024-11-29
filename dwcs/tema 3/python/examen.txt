@@ -1,0 +1,5 @@
+//TODO EXAMEN EVA
+
+- ejercico de python
+- no bootstrap ni css
+- 
