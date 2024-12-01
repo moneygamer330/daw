@@ -12,4 +12,16 @@ addElement.addEventListener("click", () => {
   li.append(input.value.trim());
   list.append(li);
   list.append(div);
+  input.value = "";
+  input.focus();
 });
+
+//filter elements
+
+
+//delete elements
+deleteElements.addEventListener("click", () => {
+  list.removeChild(li);
+});
+
+
