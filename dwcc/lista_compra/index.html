@@ -10,34 +10,36 @@
   <body>
     <div id="div">
       <h1>Lista de la compra</h1>
-      <label>Elemento a añadir a la lista de la compra</label><br /><br />
+      <label>Elemento para añadir a la lista de la compra</label><br /><br />
       <input type="text" name="element" id="element" /><br /><br />
-      <input
-        type="submit"
-        value="+ Añadir elemento"
-        id="addElement"
-      /><br /><br />
 
-      <ul id="list">
-        <br />
-        <li>A</li>
-        <li>1</li>
-        <li>2</li>
-        <li>4</li>
-        <li>223</li>
-        <li>223</li>
-      </ul>
+      <!-- Add elements to the list -->
+      <input type="submit" value="+ Añadir elemento +" id="addElement" />
+      <ul id="list"></ul>
 
-      <br />
+      <hr />
       <br />
 
+      <label>Elemento para filtrar de la lista</label>
+      <br />
+      <br />
+      <!-- Filter elements of the list -->
       <input type="text" name="filter" id="filter" />
-      <input type="button" value="filtra elementos" id="filterElements" />
+      <br />
+      <br />
+      <input type="button" value="* Filtrar elementos *" id="filterElements" />
 
       <br />
       <br />
+      <hr />
+      <br />
 
-      <input type="button" value="- Borrar lista" id="deleteElements" />
+      <label>Borrar lista</label>
+
+      <br />
+      <br />
+      <!-- Delete list -->
+      <input type="button" value="- Borrar lista -" id="deleteElements" />
     </div>
   </body>
 </html>

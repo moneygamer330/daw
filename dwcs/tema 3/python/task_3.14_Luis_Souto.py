@@ -1,5 +1,3 @@
-#TODO reapsar ejercicios python 
-
 def showDictionary(dictionary):
     print("Dictionary contents:")
     for key, value in dictionary.items():

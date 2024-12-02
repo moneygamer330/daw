@@ -2,4 +2,3 @@
 
 - ejercico de python
 - no bootstrap ni css
-- 
