@@ -35,6 +35,14 @@ addElement.addEventListener("click", () => {
 
   // Filter elements
   filterElements.addEventListener("click", () => {
-    filter;
+    filter.value = filter.value.trim();
+    const elements = ul.getElementsByTagName("li");
+    for (let i = 0; i < elements.length; i++) {
+      if (elements[i].innerText.includes(filter.value)) {
+        elements[i].style.display = "block";
+      } else {
+        elements[i].style.display = "none";
+      }
+    }
   });
 });
