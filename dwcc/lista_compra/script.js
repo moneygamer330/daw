@@ -37,11 +37,11 @@ addElement.addEventListener("click", () => {
   filterElements.addEventListener("click", () => {
     filter.value = filter.value.trim();
     const elements = ul.getElementsByTagName("li");
-    for (let i = 0; i < elements.length; i++) {
-      if (elements[i].innerText.includes(filter.value)) {
-        elements[i].style.display = "block";
+    for (let element of elements) {
+      if (element.textContent.toLowerCase().includes(filter.value.toLowerCase())) {
+        element.classList.remove("hidden");
       } else {
-        elements[i].style.display = "none";
+        element.classList.add("hidden");
       }
     }
   });

@@ -12,3 +12,7 @@ body {
 span {
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}
