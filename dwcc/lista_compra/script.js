@@ -6,21 +6,35 @@ const filterElements = document.getElementById("filterElements");
 const deleteElements = document.getElementById("deleteElements");
 const input = document.getElementById("element");
 const filter = document.getElementById("filter");
-const list = document.getElementById("list");
-let li = document.createElement("li");
-const x = document.createTextNode("[x]");
+const ul = document.getElementById("list");
 
 // Add element to the list
 addElement.addEventListener("click", () => {
+  let li = document.createElement("li");
+  const span = document.createElement("span");
+  const x = document.createTextNode(" [x]");
+  span.appendChild(x);
   li.append(input.value.trim());
-  list.appendChild(li);
-  list.appendChild(x);
-});
+  ul.appendChild(li);
+  li.appendChild(span);
 
-// Filter elements
+  // Remove one element of the list
+  span.addEventListener("click", () => {
+    const verification = confirm("Seguro que quiere borrar el elemento?");
 
-// Delete elements
-deleteElements.addEventListener("click", () => {
-  list.removeChild(li);
-  list.removeChild(x);
+    if (verification) {
+      span.removeChild(li);
+    }
+  });
+
+  // Delete elements
+  deleteElements.addEventListener("click", () => {
+    ul.removeChild(li);
+    li.removeChild(span);
+  });
+
+  // Filter elements
+  filterElements.addEventListener("click", () => {
+    filter;
+  });
 });
