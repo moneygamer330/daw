@@ -3,10 +3,12 @@
 services:
   web:
     hostname: web
-    image: docker/apache
+    build: docker/apache
     volumes:
       - ./html:/web
       - ./vhost/server1:etc/apache2/sites-enabled/server1.conf
+      - ./vhost/server1:etc/apache2/sites-enabled/server2.conf
+      - ./html/alias:/srv
     networks:
       rede_test:
         aliases:
