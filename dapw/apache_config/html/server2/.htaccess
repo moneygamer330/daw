@@ -1,0 +1,5 @@
+DiretoryIndex a.html b.html c.html
+Require all granted
+Options Indexess
+
+ErrorDocument 404 /not_found.html

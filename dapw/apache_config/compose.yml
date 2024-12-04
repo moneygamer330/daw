@@ -6,9 +6,10 @@ services:
     build: docker/apache
     volumes:
       - ./html:/web
-      - ./vhost/server1:etc/apache2/sites-enabled/server1.conf
-      - ./vhost/server1:etc/apache2/sites-enabled/server2.conf
+      - ./vhost/server1/server1.conf:/etc/apache2/sites-enabled/server1.conf
+      - ./vhost/server2/server2.conf:/etc/apache2/sites-enabled/server2.conf
       - ./html/alias:/srv
+      - ./certificados:/certificados
     networks:
       rede_test:
         aliases:
