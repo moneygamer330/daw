@@ -8,13 +8,38 @@ const input = document.getElementById("element");
 const filter = document.getElementById("filter");
 const ul = document.getElementById("list");
 
+// Check for duplicates
+function isDuplicate(value) {
+  const elements = ul.getElementsByTagName("li");
+  for (let element of elements) {
+    if (element.textContent.replace(" [x]", "").trim() === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Add element to the list
 addElement.addEventListener("click", () => {
   let li = document.createElement("li");
   const span = document.createElement("span");
   const x = document.createTextNode(" [x]");
+  let value = input.value.trim();
+
+  // Check for empty input
+  if (value === "") {
+    alert("No puedes agregar un elemento vacío.");
+    return;
+  }
+
+  // Check for duplicates
+  if (isDuplicate(value)) {
+    alert("El elemento ya existe en la lista.");
+    return;
+  }
+
   span.appendChild(x);
-  li.append(input.value.trim());
+  li.append(value);
   ul.appendChild(li);
   li.appendChild(span);
 
@@ -23,7 +48,7 @@ addElement.addEventListener("click", () => {
     const verification = confirm("Seguro que quiere borrar el elemento?");
 
     if (verification) {
-      span.removeChild(li);
+      ul.removeChild(li);
     }
   });
 
@@ -34,11 +59,13 @@ addElement.addEventListener("click", () => {
   });
 
   // Filter elements
-  filterElements.addEventListener("click", () => {
+  filter.addEventListener("input", () => {
     filter.value = filter.value.trim();
     const elements = ul.getElementsByTagName("li");
     for (let element of elements) {
-      if (element.textContent.toLowerCase().includes(filter.value.toLowerCase())) {
+      if (
+        element.textContent.toLowerCase().includes(filter.value.toLowerCase())
+      ) {
         element.classList.remove("hidden");
       } else {
         element.classList.add("hidden");
