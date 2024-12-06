@@ -8,5 +8,4 @@ class Registration(models.Model):
     age = models.IntegerField()
     
     def __str__(self):
-        return self.name
-    
+        return f"{self.name} {self.surname} {self.age}"    

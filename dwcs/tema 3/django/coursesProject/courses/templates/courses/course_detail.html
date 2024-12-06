@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}{{ course.name }}{% endblock %}
+
+{% block content %}
+<h2>{{ course.name }}</h2>
+<p><strong>Description:</strong> {{ course.description }}</p>
+<p><strong>Start Date:</strong> {{ course.start_date|date:"F d, Y" }}</p>
+<img src="{{ course.image_url }}" class="img-fluid rounded" alt="Course Image">
+<a href="{% url 'registration' %}" class="btn btn-primary mt-4">Register</a>
+{% endblock %}
