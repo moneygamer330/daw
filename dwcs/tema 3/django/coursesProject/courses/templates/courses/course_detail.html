@@ -4,7 +4,9 @@
 {% block content %}
 <h2>{{ course.name }}</h2>
 <p><strong>Description:</strong> {{ course.description }}</p>
-<p><strong>Start Date:</strong> {{ course.start_date|date:"F d, Y" }}</p>
 <img src="{{ course.image_url }}" class="img-fluid rounded" alt="Course Image">
+<br>
 <a href="{% url 'registration' %}" class="btn btn-primary mt-4">Register</a>
+<br>
+<a href="{% url 'courses' %}" class="btn btn-secondary mt-4">Back to Courses</a>
 {% endblock %}

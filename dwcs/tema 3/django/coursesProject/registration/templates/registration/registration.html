@@ -8,13 +8,9 @@
     <div class="mb-3">
         {{ form.as_p }}
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
-</form>
+    <button type="submit" class="btn btn-success"><a href="{% url 'home' %}" class="text-white text-decoration-none">Submit</a></button>
 
-{% if success %}
-<script type="text/javascript">
-    alert('Registration Successful!');
-    window.location.href = '{% url "home" %}'; 
-</script>
-{% endif %}
+</form>
+<a href="{% url 'home' %}" class="btn btn-secondary mt-4">Back to Home</a>
+
 {% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">Welcome to My App</h1>
+    <img src="{% static 'media/welcome.png' %}" class="img-fluid rounded" alt="Placeholder Image">
+</div>
+{% endblock %}
