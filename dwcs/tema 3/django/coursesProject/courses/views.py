@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404 # type: ignore
+from django.shortcuts import render,get_object_or_404 # type: ignore
 from .models import Courses
 
 # Create your views here.

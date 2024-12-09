@@ -1,3 +1,27 @@
+#TODO EXAM: 3.18, 3.16, 3.17, 3.15
+# 
+# LISTS
+# add (.append()) 
+# loops ([for x in list], range())
+# 
+# DICTIONARIES (acces, add, loop)
+# access
+# add 
+# loop
+#
+# CLASSES
+# all functions are 'self'
+# to string method (return f'..{self.x}..')
+# 
+# EXCEPTIONS
+# 
+#
+#
+#
+#
+#
+#
+
 class BookNotAvailableException(Exception):
     def __init__(self, message):
         self.message = message

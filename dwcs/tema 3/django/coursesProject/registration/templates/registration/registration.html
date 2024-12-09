@@ -1,16 +1,22 @@
-{% extends 'base.html' %}
-{% block title %}Registration{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% block title %}Registration{% endblock %} {% load
+static %} {% block content %}
 <h2>Register</h2>
 <form method="post">
-    {% csrf_token %}
-    <div class="mb-3">
-        {{ form.as_p }}
-    </div>
-    <button type="submit" class="btn btn-success"><a href="{% url 'home' %}" class="text-white text-decoration-none">Submit</a></button>
-
+  {% csrf_token %} Name: <input type="text" name="name" /><br /><br />
+  Surname: <input type="text" name="surname" /><br /><br />
+  Age: <input type="text" name="age" /><br /><br />
+  <button type="submit" class="btn btn-success">Success</button><br />
 </form>
-<a href="{% url 'home' %}" class="btn btn-secondary mt-4">Back to Home</a>
 
-{% endblock %}
+{% if name or surname or age %}
+<br />
+<h3>Datos ingresados:</h3>
+<ul>
+  <li><strong>Nombre:</strong> {{ name }}</li>
+  <br />
+  <li><strong>Apellido:</strong> {{ surname }}</li>
+  <br />
+  <li><strong>Edad:</strong> {{ age }}</li>
+</ul>
+<a href="{% url 'home' %}" class="btn btn-secondary mt-4">Back to Home</a><br />
+{% endif %} {% endblock %}

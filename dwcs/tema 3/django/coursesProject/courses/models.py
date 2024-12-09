@@ -4,7 +4,7 @@ from django.db import models # type: ignore
 class Courses(models.Model):
     name = models.CharField(max_length=100)
     description= models.TextField(max_length=250)
-    photo = models.ImageField(upload_to='images/')
+    photo = models.ImageField(upload_to='media/images/')
     
     def __str__(self):
         return self.name
