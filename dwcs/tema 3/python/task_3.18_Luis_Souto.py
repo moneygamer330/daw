@@ -1,3 +1,5 @@
+# 
+# 
 #TODO EXAM: 3.18, 3.16, 3.17, 3.15
 # 
 # LISTS
@@ -16,11 +18,7 @@
 # EXCEPTIONS
 # 
 #
-#
-#
-#
-#
-#
+
 
 class BookNotAvailableException(Exception):
     def __init__(self, message):
